@@ -6,6 +6,11 @@
     font-size: 20px;
 }
 
+/* 
+    Justify == Main axis
+    align == Cross axis
+*/
+
 .header-left {
     flex: 1;
     display: flex;
