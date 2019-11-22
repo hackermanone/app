@@ -26,9 +26,9 @@ class Header extends React.Component {
         <div className="header-center"></div>
         
         <div className="header-right">
-          <li>Resume</li>
-          <li>LinkedIn</li>
-          <li>Github</li>
+          <Link to="/" id="resume">Resume</Link>
+          <Link to="">LinkedIn</Link>
+          <Link to="">Github</Link>
         </div>
       </div>
     );
