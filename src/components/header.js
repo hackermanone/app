@@ -1,40 +1,36 @@
 import React from 'react';
 import '../styles/header.css'
-
+import GithubIcon from '../assets/images/GithubIcon'
+import LinkedinIcon from '../assets/images/LinkedinIcon'
 import { Link } from 'react-router-dom'
 
 class Header extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    console.log(e);
-  }
 
   render() {
     return(
       <div className="row-flex">
         <div className="header-left">
-          <li id="name">Ricky Chen</li>
-          <Link to="/about">About Me</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <button type="button" onClick={this.handleClick}>Contact</button>
+          <li><Link to="/about">About Me</Link></li>
+          <li><Link to="/portfolio">Portfolio</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/" id="resume">Resume</Link></li>
         </div>
 
-        <div className="header-center"></div>
+        <div className="header-title">
+          <span id="name">Ricky Chen</span>
+        </div>
 
         <div className="header-right">
-          <Link to="/" id="resume">Resume</Link>
-          <a href="https://www.linkedin.com/in/rickychen98/" target="_blank" rel="noopener noreferrer">
-            <img src={require("../assets/images/linkedin.svg")} alt="linkedin logo"/>
-          </a>
-          <a href="https://github.com/hackermanone" target="_blank" rel="noopener noreferrer">
-            <img src={require("../assets/images/github.svg")} alt="github logo"/>
-          </a>
+          <li>
+            <a href="https://www.linkedin.com/in/rickychen98/" target="_blank" rel="noopener noreferrer">
+              <LinkedinIcon/>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/hackermanone" target="_blank" rel="noopener noreferrer">
+              <GithubIcon/>
+            </a>
+          </li>
         </div>
       </div>
     );
