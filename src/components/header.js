@@ -6,10 +6,38 @@ import { Link } from 'react-router-dom'
 
 class Header extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.headerLeft = React.createRef();
+  }
+
+  handleClick = (e) => {
+    for (let item of this.headerLeft.current.children) {
+      if (item.localName === "li") {
+        if (item.classList.contains("show")) {
+          item.classList.remove("show");
+        } else {
+          item.classList.add("show");
+        }
+      } else {
+        if (item.classList.contains("open")) {
+          item.classList.remove("open");
+        } else {
+          item.classList.add("open");
+        }
+      }
+    }
+  }
+
   render() {
     return(
-      <div className="row-flex">
-        <div className="header-left">
+      <div className="flex">
+        <div className="header-left" ref={this.headerLeft}>
+          <div id="nav-icon" onClick={this.handleClick}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/contact">Contact</Link></li>
