@@ -40,7 +40,8 @@
 li {
     display: inline-block;
     margin: 5px;
-    list-style: none
+    list-style: none;
+    text-align: center;
 }
 
 svg {
@@ -48,12 +49,6 @@ svg {
   width: 0.5vw;
 }
 
-a {
-  color: white;
-  min-height: 50px;
-  text-decoration: none;
-  padding: 10px 5px 5px 5px;
-}
 
 path {
   fill:white;
@@ -62,6 +57,15 @@ path {
 /*
   css
 */
+.header-left a {
+  display: inline-block;
+  color: white;
+  min-height: 50px;
+  text-decoration: none;
+  transition-duration: 500ms;
+  line-height: 200%;
+}
+
 div#nav-icon span {
   display: block;
   height: 6px;
@@ -88,9 +92,18 @@ div#nav-icon span {
 /*
   Animation css
 */
-a:hover {
-  color: red;
-  border-bottom: solid;
+
+a:after {
+  transition: all ease-in-out .2s;
+  background: none repeat scroll 0 0 red;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+}
+
+a:hover:after {
+  width:100%;
 }
 
 .hidden {
