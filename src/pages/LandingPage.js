@@ -1,7 +1,7 @@
 import React from 'react'
 
 function LandingPage() { 
-    return(
+      return(
         <h1>hihi</h1>
     )
 }

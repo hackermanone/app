@@ -4,6 +4,8 @@
     align == Cross axis
 */
 .flex {
+  position: relative;
+  z-index: 1;
   color:white;
   font-weight: 900;
   display: flex;
@@ -64,6 +66,10 @@ path {
   text-decoration: none;
   transition-duration: 500ms;
   line-height: 200%;
+}
+
+.header-left a:active {
+  background-color: white;
 }
 
 div#nav-icon span {

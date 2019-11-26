@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/header.css'
+import '../styles/Header.css'
 import GithubIcon from '../assets/images/GithubIcon'
 import LinkedinIcon from '../assets/images/LinkedinIcon'
 import { Link } from 'react-router-dom'
