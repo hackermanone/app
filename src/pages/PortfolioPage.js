@@ -8,7 +8,7 @@ class PortfolioPage extends React.Component {
     return(
       <div className="bg">
         <div className="card-wrapper">
-          <Card src={require('../assets/images/images.png')} alt="hahayeet" text="baylife"></Card>
+          <Card src={require('../assets/images/images.png')} alt="hahayeet" text="baylife" title="asds"></Card>
         </div>
       </div>
     )

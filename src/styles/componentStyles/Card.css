@@ -1,0 +1,22 @@
+
+.card-wrapper {
+  display: flex;
+  margin: 75px 20%;
+  justify-content: center;
+}
+
+.card-image {
+  float: left;
+}
+
+.card-text {
+  padding: 10px;
+}
+
+.card-title {
+  padding: 2px 16px;
+}
+
+img {
+  display: block;
+}

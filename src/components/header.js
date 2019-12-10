@@ -40,7 +40,6 @@ class Header extends React.Component {
           </div>
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/" id="resume">Resume</Link></li>
         </div>
 
